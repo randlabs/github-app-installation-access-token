@@ -1,0 +1,27 @@
+{
+  "name": "github-app-installation-access-token",
+  "version": "1.0.0",
+  "description": "Get an installation access token from a GitHub App",
+  "bin": {
+    "github-app-installation-access-token": "./cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randlabs/github-app-installation-access-token.git"
+  },
+  "author": "RandLabs.IO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/randlabs/github-app-installation-access-token/issues"
+  },
+  "homepage": "https://github.com/randlabs/github-app-installation-access-token#readme",
+  "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.8",
+    "eslint": "^8.13.0"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "commander": "^9.1.0",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
