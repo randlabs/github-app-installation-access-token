@@ -23,15 +23,15 @@ program.command('get')
 		.argParser(parsePrivateKey))
 	.action(get);
 
-program.command('cred')
+program.command('get-with-cred')
 	.description('Get an installation token given a base64 encoded credentials')
 	.addOption(new Option('-c, --credentials <credentials-token>', 'Base64 encoded credentials')
-		.env('GAIAT_TOKEN')
+		.env('GAIAT_CREDENTIALS')
 		.makeOptionMandatory(true)
 		.argParser(parseCredentials))
 	.action(getWithToken);
 
-program.command('gen')
+program.command('gen-creds')
 	.description('Generates a base64 encoded credentials given an application id, installation id and private key')
 	.addOption(new Option('-a, --appId <app-id>', 'Application ID')
 		.env('GAIAT_APPID')
