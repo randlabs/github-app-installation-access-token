@@ -23,5 +23,11 @@
     "axios": "^0.26.1",
     "commander": "^9.1.0",
     "jsonwebtoken": "^8.5.1"
+  },
+  "engines": {
+    "node": ">=16 || ^14.17"
+  },
+  "scripts": {
+    "github-app-installation-access-token": "node ./cli.js"
   }
 }
