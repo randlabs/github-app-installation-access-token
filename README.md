@@ -33,12 +33,26 @@ At this point you must have:
 
 ### Generating a packed credentials token
 
-Run: `node cli.js get -a {APP-ID} -i {INSTALLATION-ID} -k "{PRIVATE-KEY}"`
+Run `npx https://github.com/randlabs/github-app-installation-access-token gen-cred -a {APP-ID} -i {INSTALLATION-ID} -k "{PRIVATE-KEY}"`
 
-(to be continued)
+And the base64 encoded credentials token will be written into the console output.
 
-#### NOTE:
-The `-k, --privateKey` parameter accepts a file reference if you prefix the value with `@`.
+### Getting an access token
+
+Run `npx https://github.com/randlabs/github-app-installation-access-token get -a {APP-ID} -i {INSTALLATION-ID} -k {PRIVATE-KEY}`
+
+or `npx https://github.com/randlabs/github-app-installation-access-token get-with-cred -c {BASE64-ENCODED-CREDENTIALS}`
+
+To get an access token that will be written into the console output.
+
+The common approach is to save the output into an environment variable and use it to access allowed repositories like the following example:
+
+`git clone https://x-access-token:<token>@github.com/owner/repo.git`
+
+#### NOTES:
+
+* The `-k, --privateKey` parameter accepts a file reference if you prefix the value with `@`.
+* Use NodeJS v16 or later.
 
 # License
 See `LICENSE` file for licensing details.
